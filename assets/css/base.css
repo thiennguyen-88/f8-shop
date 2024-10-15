@@ -1,0 +1,201 @@
+:root {
+  --primary-color: #ee4d2d;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --border-color: #dbdbdb;
+  --gold-star-color:#ffb91e;
+  --header-height: 120px;
+  --navbar-height: 30px;
+  --header-with-search-height: calc(
+    var(--header-height) - var(--navbar-height)
+  );
+}
+
+* {
+  box-sizing: inherit; /* ke thua tu the chua no */
+}
+
+html {
+  font-size: 62.5%; /* dua font ve mac dinh la 10px = 1rem*/
+  line-height: 1.6rem; /* 1.6rem = 16px */
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box; /* html la the to nhat chua tat ca cac the */
+}
+
+/* css for responesive */
+.grid {
+  width: 1200px; /* khi man hinh lon hon 1200px thi width=1200px*/
+  max-width: 100%; /* khi man hinh nho hon 1200px thi width= 100% man hinh */
+  margin: 0 auto; /* tu dong can giua khoi nay voi khoi khac*/
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+/* test reponsive */
+.grid__col-2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 16.6667%;
+}
+
+.grid__col-2-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 20%;
+}
+
+.grid__col-10 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 83.3334%;
+}
+
+/* animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-from));
+  }
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
+/* css modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* display: flex; */
+  display: none;
+  animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  position: relative;
+  margin: auto;
+  /* width: 300px;
+    height: 300px; */
+  /* background-color: var(--white-color); */
+  z-index: 1;
+  --growth-from: 0.7;
+  --growth-to: 1;
+  animation: growth linear 0.1s;
+}
+
+/* button style */
+.btn {
+  min-width: 124px;
+  height: 34px;
+  border: none;
+  outline: none;
+  text-decoration: none; /* de phong khi co the a */
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 0 12px;
+  cursor: pointer;
+  color: var(--text-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2rem;
+  background-color: var(--white-color);
+}
+
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 1.2rem;
+  padding: 0 8px;
+}
+.btn.btn--disabled {
+  cursor: default;
+  color: #949494;
+  background-color: #c3c3c3;
+}
+
+/* selection button */
+.select-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+  min-width: 200px;
+  background-color: var(--white-color);
+  padding: 0 12px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.select-input__label {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.select-input__icon {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.select-input:hover .select-input__list {
+  display: block;
+}
+
+.select-input__list {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background-color: var(--white-color);
+  border-radius: 2px;
+  list-style: none;
+  padding: 8px 16px;
+  margin-top: 0;
+  display: none;
+}
+
+.select-input__link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #555;
+  padding: 6px 0;
+}
+
+.select-input__link:hover {
+  color: var(--primary-color);
+}
