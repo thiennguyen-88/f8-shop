@@ -58,6 +58,7 @@
   display: none;
 }
 
+/* tạo tooltip arow */
 .header__navbar-user-menu::after {
   content: "";
   border-width: 20px 25px;
@@ -65,7 +66,7 @@
   border-color: transparent transparent var(--white-color) transparent;
   position: absolute;
   z-index: -4;
-  top: -30px;
+  top: -28px;
   right: 0;
 }
 
@@ -174,9 +175,10 @@
   position: absolute;
   top: 116%;
   left: 0;
+  z-index: 1;
   padding: 8px;
   border-radius: 2px;
-  /* border: 1px solid #333; */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: none;
   animation: fadeIn ease-in-out 0.3s;
 }
@@ -508,6 +510,7 @@
   position: absolute;
   top: calc(100% + 12px);
   right: 0px;
+  z-index: 1;
   width: 400px;
   border-radius: 2px;
   background-color: var(--white-color);
@@ -578,6 +581,8 @@
 .header__cart-list-product {
   padding-left: 0;
   list-style: none;
+  height: 60vh;
+  overflow-y: auto;
 }
 
 .header__cart-item {
@@ -613,6 +618,14 @@
   font-weight: 500;
   color: var(--text-color);
   margin: 0;
+  line-height: 2rem;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  flex: 1;
+  text-align: justify;
+  margin-right: 16px;
 }
 
 .header__cart-item-price-table {
@@ -728,6 +741,7 @@
   position: absolute;
   right: 0;
   top: calc(100% + 5px);
+  z-index: 1;
   width: 130px;
   list-style: none;
   padding-left: 0;
@@ -787,6 +801,7 @@
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
+  z-index: 1;
   width: calc(100% - 16px);
   background-color: var(--white-color);
   border-radius: 2px;
@@ -970,7 +985,7 @@
   background-color: var(--white-color);
   margin-top: 10px;
   text-decoration: none;
-  border-radius: 0 0 2px 2px;
+  border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: transform ease-in-out 0.1s;
   will-change: transform;
@@ -986,6 +1001,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  border-radius: 2px 2px 0 0;
 }
 
 .home-product-item__name {
@@ -1119,6 +1135,7 @@
   height: 36px;
   background-color:rgba(255, 216, 64, 0.94);
   text-align: center;
+  border-radius: 0 2px 0 0;
 }
 
 .home-product-item__discount::after {
