@@ -1165,3 +1165,8 @@
   position: relative;
   bottom: -4px;
 }
+
+/* pagination */
+.home-product__pagination {
+  margin: 54px 0 32px;
+}

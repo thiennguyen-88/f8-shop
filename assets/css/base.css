@@ -211,3 +211,44 @@ html {
 .select-input__link:hover {
   color: var(--primary-color);
 }
+
+/* pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination-item {
+  
+
+}
+
+.pagination-item--active .pagination-item__link {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+  background-color: #ee4d2dd1;
+}
+
+.pagination-item__link {
+  --height:30px;
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.4);
+  min-width: 40px;
+  height: var(--height);
+  text-align: center;
+  line-height: var(--height);
+  border-radius: 2px;
+  margin: 0 12px;
+}
+
+.pagination-item__icon {
+
+}
