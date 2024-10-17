@@ -220,10 +220,6 @@ html {
   list-style: none;
 }
 
-.pagination-item {
-  
-
-}
 
 .pagination-item--active .pagination-item__link {
   background-color: var(--primary-color);
@@ -249,6 +245,6 @@ html {
   margin: 0 12px;
 }
 
-.pagination-item__icon {
 
-}
+
+
